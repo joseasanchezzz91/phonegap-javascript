@@ -1,0 +1,16 @@
+html{
+
+	margin: 0px;
+	padding: 0px;
+}
+.boxlogin{
+	margin: 50px auto;
+	width: 420px;
+}
+
+input[type="submit"]{
+	margin-top: 13px;
+}
+input[type="button"]{
+	margin-top: 13px;
+}
