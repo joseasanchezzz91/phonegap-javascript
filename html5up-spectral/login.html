@@ -8,24 +8,69 @@
 		<link rel="stylesheet" href="assets/css/bootstrap.css">
 		
 		<link rel="stylesheet" href="assets/css/login.css">
+
 		</head>
 	
 <body >
+<script >
+	
+var validar = function(){
+var correo,nombre,direccion,telefono,apellido,clave;
+
+	correo= document.getElementById('correo');
+	nombre= document.getElementById('nombre');
+	direccion= document.getElementById('direccion');
+	telefono= document.getElementById('telefono');
+	apellido= document.getElementById('clave');
+	clave= document.getElementById('apellido');
+
+if (correo=="") {
+	alert("Ingresa correo");
+
+	return false;
+}
+ else if (nombre=="") {
+	alert("Ingresa nombre");
+
+	return false;
+}
+  else if (apellido=="") {
+	alert("Ingresa apellido");
+	return false;
+}
+ else if (direccion=="") {
+	alert("Ingresa direccion");
+	
+	return false;
+}
+ else if (telefono=="") {
+	alert("Ingresa telefono");
+	return false;
+}
+ else if (clave=="") {
+	alert("Ingresa clave");
+
+	return false;
+}
+ return true;
+}
+
+</script>
 <div class="jumbotron boxlogin">
 	<h1> Ingresa tus Datos</h1>
-<form action="">
+<form action=""  onsubmit="validar();"   >
 	<label>Correo:</label>
-<input type="text" name="correo" id="correo " placeholder="Correo" class="form-control" required="">
+<input type="text" name="correo" id="correo " placeholder="Correo@example.com" class="form-control" >
 <label>Password:</label>
-<input type="text" name="clave" id="clave" placeholder="Password"  class="form-control" required="">
+<input type="text" name="clave" id="clave" placeholder="Password"  class="form-control" >
 <label>Nombre:</label>
-<input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" required="">
+<input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" >
 <label>Apellido:</label>
-<input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control"required="">
+<input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control">
 <label>Telefono:</label>
-<input type="text" name="telefono" id="telefono" placeholder="Telefono" class="form-control" required="">
+<input type="text" name="telefono" id="telefono" placeholder="Telefono" class="form-control" >
 <label>Direccion:</label>
-<input type="text" name="direccion" id="direccion" placeholder="Direccion" class="form-control" required="">
+<input type="text" name="direccion" id="direccion" placeholder="Direccion" class="form-control">
 
 <input type="submit" name="enviar" id="enviar" class="btn btn-primary"  >
 <input type="button" name="cancelar" id="cancelar" class="btn btn-danger" value="Cancelar" >
